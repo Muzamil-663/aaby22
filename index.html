@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A birthday surprise made for Abdullah — Aaby">
+  <title>To Aaby — 22</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.ico">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="loading">
+  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+
+  <!-- Fake loading screen -->
+  <section class="loader" id="loader" aria-label="Preparing birthday surprise">
+    <div class="terminal-card">
+      <p><span class="prompt">></span> Initializing birthday surprise...</p>
+      <p><span class="prompt">></span> <span id="loadingLine">Locating Aaby...</span></p>
+      <div class="progress-track"><span id="progressBar"></span></div>
+      <p class="progress-number" id="progressNumber">0%</p>
+      <p id="loaderHint" class="loader-hint">Please wait...</p>
+      <button id="enterButton" class="enter-button" disabled>PRESS ENTER TO BEGIN <span>↵</span></button>
+    </div>
+  </section>
+
+  <audio id="birthdayMusic" loop preload="auto">
+    <source src="assets/music/birthday.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="musicButton" class="music-button" aria-label="Play background music" title="Play background music">
+    <span id="musicIcon">♫</span>
+    <span class="music-label" id="musicLabel">Play music</span>
+  </button>
+
+  <main>
+    <!-- HERO: hero1 is shown in full, never cropped -->
+    <section class="hero">
+      <div class="hero-blur" aria-hidden="true"></div>
+      <div class="hero-grid">
+        <div class="hero-copy reveal-on-load">
+          <p class="hero-kicker">7 JULY 2026 · Chota sa gift meri taraf se</p>
+          <h1>TO <em>AABY </em></h1>
+          <p class="hero-tagline">22 saal k ho gaye Uncle kahin k</p>
+          <button id="journeyButton" class="outline-button">Chalo shuru karein <span>↓</span></button>
+        </div>
+
+        <div class="hero-photo-wrap reveal-on-load">
+          <img src="assets/images/hero1.jpg" alt="Aaby" class="hero-photo">
+        </div>
+      </div>
+      <p class="scroll-note">Scroll karo ab Shabah <span>↓</span></p>
+    </section>
+
+    <!-- INTRO -->
+    <section class="intro-section section">
+      <div class="intro-copy scroll-reveal">
+        <p class="tiny-label">This is Abdullah Faraz</p>
+        <h2>The one who loves The one who cares</h2>
+        <p>
+          Har waqt shugal mela lagany wala, sab ka khiyal rakhnay wala , dil ka kazmor magar sath nibanay wala 
+                        Abdullah, Lets see his different personalites
+        </p>
+      </div>
+    </section>
+
+    <!-- 01: OUTFIT PAGLU -->
+    <section class="outfit-section section" id="outfit">
+      <div class="section-intro scroll-reveal">
+        <p class="section-number"></p>
+        <h2>Outfit Paglu </h2>
+        <p class="urdu-line"> Dressing Sense to dekho bhai ki </p>
+        <p class="section-copy">
+          Jesay kapray marzi pehn lo, lagna tum ne musali hi ha phr bhi
+        </p>
+      </div>
+
+      <div class="outfit-layout">
+        <figure class="photo-frame tall-frame scroll-reveal">
+          <img src="assets/images/img1.jpg" alt="Aaby wearing an outfit">
+        </figure>
+        <div class="outfit-side">
+          <figure class="photo-frame scroll-reveal">
+            <img src="assets/images/img2.jpg" alt="Aaby in red outfit">
+          </figure>
+          <figure class="photo-frame scroll-reveal">
+            <img src="assets/images/img3.jpg" alt="Aaby posing">
+          </figure>
+        </div>
+        <div class="outfit-footer">
+          <figure class="photo-frame scroll-reveal">
+            <img src="assets/images/img4.jpg" alt="Aaby in traditional outfit">
+          </figure>
+          <div class="outfit-quote scroll-reveal">
+            <span>“</span>
+            <p>Pose mar k picture banwata hun <br> Cool lagun ga </p>
+          </div>
+          <figure class="photo-frame scroll-reveal">
+            <img src="assets/images/img5.jpg" alt="Aaby sitting in an outfit">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02: WHY SO SERIOUS -->
+    <section class="serious-section section">
+      <div class="serious-heading scroll-reveal">
+        <p class="section-number"></p>
+        <h2>Why so serious?</h2>
+        <p class="urdu-line">Baby ko kis ne maara hai?</p>
+        <p>Itni serious looks jese kisi movie ke audition mein aaye ho</p>
+      </div>
+
+      <div class="serious-layout">
+        <figure class="photo-frame serious-a scroll-reveal">
+          <img src="assets/images/img6.jpg" alt="Aaby looking serious">
+        </figure>
+        <div class="serious-center scroll-reveal">
+          <p class="serious-word">SERIOUS<br><em>MODE</em></p>
+          <span>ON</span>
+        </div>
+        <figure class="photo-frame serious-b scroll-reveal">
+          <img src="assets/images/img7.jpg" alt="Aaby posing in the mountains">
+        </figure>
+        <figure class="photo-frame serious-c scroll-reveal">
+          <img src="assets/images/img8.jpg" alt="Aaby in a serious pose">
+        </figure>
+        <figure class="photo-frame serious-d scroll-reveal">
+          <img src="assets/images/img9.jpg" alt="Aaby standing by a wall">
+        </figure>
+      </div>
+    </section>
+
+    <!-- 03: KALA HAI PAR DIL WALA HAI -->
+    <section class="dil-section section">
+      <div class="dil-heading scroll-reveal">
+        <p class="section-number"></p>
+        <h2>Kala hai, par dil wala hai</h2>
+        <p class="urdu-line">Shakal to kali ha lekin dil nahi</p>
+      </div>
+
+      <div class="cafe-layout">
+        <figure class="photo-frame cafe-main scroll-reveal">
+          <img src="assets/images/img10.jpg" alt="Aaby at a cafe">
+        </figure>
+        <div class="cafe-copy scroll-reveal">
+          <p class="coffee-stamp">100%<br>Drama</p>
+          <p>
+            Act to esay kar raha, jesay is se shareef bnda to dunya mein ha hi nahi
+          </p>
+          <p class="small-urdu">Har waqt photogenic banne ki koshish karta hai.</p>
+        </div>
+        <figure class="photo-frame cafe-two scroll-reveal">
+          <img src="assets/images/img11.jpg" alt="Aaby at a cafe">
+        </figure>
+        <figure class="photo-frame cafe-three scroll-reveal">
+          <img src="assets/images/img12.jpg" alt="Aaby at a cafe">
+        </figure>
+        <figure class="photo-frame cafe-four scroll-reveal">
+          <img src="assets/images/img13.jpg" alt="Aaby smiling at a cafe">
+        </figure>
+        <figure class="photo-frame cafe-five scroll-reveal">
+          <img src="assets/images/img14.jpg" alt="Aaby at a cafe">
+        </figure>
+        <figure class="photo-frame cafe-six scroll-reveal">
+          <img src="assets/images/img15.jpg" alt="Aaby at a cafe">
+        </figure>
+      </div>
+    </section>
+
+    <!-- 04: MODEL / NAMOONA -->
+    <section class="model-section section">
+      <div class="model-title scroll-reveal">
+        <p class="section-number"></p>
+        <h2>Bro thinks he is a model</h2>
+        <p class="urdu-line">Model ka toh nahi pata, namoona zaroor hai.</p>
+        <p>Camera dekha nahi k shokiyan marna shuru ho jata ha</p>
+      </div>
+
+      <div class="model-board">
+        <figure class="model-card card-one scroll-reveal">
+          <img src="assets/images/img16.jpg" alt="Aaby at night">
+          <figcaption>POSE 01 · CITY LIGHTS</figcaption>
+        </figure>
+        <figure class="model-card card-two scroll-reveal">
+          <img src="assets/images/img17.jpg" alt="Aaby in the mountains">
+          <figcaption>POSE 02 · MOUNTAIN MAN</figcaption>
+        </figure>
+        <figure class="model-card card-three scroll-reveal">
+          <img src="assets/images/img18.jpg" alt="Aaby posing by a road">
+          <figcaption>POSE 03 · THINKING TOO HARD</figcaption>
+        </figure>
+        <figure class="model-card card-four scroll-reveal">
+          <img src="assets/images/img19.jpg" alt="Aaby posing by a wall">
+          <figcaption>POSE 04 · BRICK WALL ENERGY</figcaption>
+        </figure>
+        <figure class="model-card card-five scroll-reveal">
+          <img src="assets/images/img20.jpg" alt="Aaby taking a mirror selfie">
+          <figcaption>POSE 05 · MIRROR APPROVED</figcaption>
+        </figure>
+        <figure class="model-card card-six scroll-reveal">
+          <img src="assets/images/img21.jpg" alt="Aaby near a red container">
+          <figcaption>POSE 06 · MAIN CHARACTER</figcaption>
+        </figure>
+      </div>
+    </section>
+
+
+    <!-- 05: DAMAGH PHIRA — AUTO-LOOPING VIDEO EVIDENCE -->
+    <section class="damagh-section section" id="damagh">
+      <div class="damagh-heading scroll-reveal">
+        <p class="section-number"></p>
+        <h2>Damagh Phira</h2>
+        <p class="urdu-line">Photos mein phr seedha lagta hai… videos mein pora software crash ho jata hai </p>
+        <p>Ullu ka patha ha pora</p>
+      </div>
+
+      <div class="video-collage" aria-label="Funny looping videos of Aaby">
+        <figure class="video-frame video-one scroll-reveal">
+          <video class="auto-loop-video" autoplay muted loop playsinline preload="metadata" aria-label="Funny Aaby video 1">
+            <source src="assets/videos/video1.mp4" type="video/mp4">
+          </video>
+          <figcaption>Confidence level illegal</figcaption>
+        </figure>
+
+        <figure class="video-frame video-two scroll-reveal">
+          <video class="auto-loop-video" autoplay muted loop playsinline preload="metadata" aria-label="Funny Aaby video 2">
+            <source src="assets/videos/video2.mp4" type="video/mp4">
+          </video>
+          <figcaption>No further questions</figcaption>
+        </figure>
+
+        <figure class="video-frame video-three scroll-reveal">
+          <video class="auto-loop-video" autoplay muted loop playsinline preload="metadata" aria-label="Funny Aaby video 3">
+            <source src="assets/videos/video3.mp4" type="video/mp4">
+          </video>
+          <figcaption>System not responding</figcaption>
+        </figure>
+
+        <figure class="video-frame video-four scroll-reveal">
+          <video class="auto-loop-video" autoplay muted loop playsinline preload="metadata" aria-label="Funny Aaby video 4">
+            <source src="assets/videos/video4.mp4" type="video/mp4">
+          </video>
+          <figcaption>Sheela ki Jawani</figcaption>
+        </figure>
+
+        <div class="case-stamp scroll-reveal" aria-hidden="true">CASE FILE<br><strong>AABY</strong><br>UNFILTERED</div>
+      </div>
+    </section>
+
+    <!-- LAST RANDOM FAVOURITES -->
+    <section class="favourite-section section">
+      <div class="favourite-heading scroll-reveal">
+        <p class="tiny-label">...Khair...</p>
+        <h2>Jesa bhi hai, mujhe bohot pasand hai</h2>
+        <p>Love you Lot - Meri Jan</p>
+      </div>
+
+      <div class="favourite-collage">
+        <figure class="favourite-photo p1 scroll-reveal"><img src="assets/images/img3.jpg" alt="Favourite Aaby photo"></figure>
+        <figure class="favourite-photo p2 scroll-reveal"><img src="assets/images/img7.jpg" alt="Favourite Aaby photo"></figure>
+        <figure class="favourite-photo p3 scroll-reveal"><img src="assets/images/img11.jpg" alt="Favourite Aaby photo"></figure>
+        <figure class="favourite-photo p4 scroll-reveal"><img src="assets/images/img16.jpg" alt="Favourite Aaby photo"></figure>
+        <figure class="favourite-photo p5 scroll-reveal"><img src="assets/images/img20.jpg" alt="Favourite Aaby photo"></figure>
+        <div class="heart-note scroll-reveal">AABY<br><span>♡</span></div>
+      </div>
+
+      <div class="verdict-replay scroll-reveal" aria-label="Final verdict video replays">
+        <div class="verdict-video-strip">
+          <video class="auto-loop-video verdict-v1" autoplay muted loop playsinline preload="metadata" aria-label="Final replay video 1"><source src="assets/videos/video1.mp4" type="video/mp4"></video>
+          <video class="auto-loop-video verdict-v2" autoplay muted loop playsinline preload="metadata" aria-label="Final replay video 2"><source src="assets/videos/video2.mp4" type="video/mp4"></video>
+          <video class="auto-loop-video verdict-v3" autoplay muted loop playsinline preload="metadata" aria-label="Final replay video 3"><source src="assets/videos/video3.mp4" type="video/mp4"></video>
+          <video class="auto-loop-video verdict-v4" autoplay muted loop playsinline preload="metadata" aria-label="Final replay video 4"><source src="assets/videos/video4.mp4" type="video/mp4"></video>
+        </div>
+      </div>
+    </section>
+
+    <!-- LETTER + END HERO2 -->
+    <section class="final-section">
+      <div class="final-blur" aria-hidden="true"></div>
+      <div class="final-grid">
+        <div class="letter-wrap scroll-reveal">
+          <p class="letter-to">Happy Birthday Jee</p>
+          <p>
+            May Allah bless you with everything you ever wished for, Allah tumhe lambi sehat wali zindagi ata farmaye,
+            hamesha khush rakhay kabhi koi parehsani na anay day, or tumhe dunya akhirat ki kamyabi ata farmaye - Ameen
+          </p>
+          <p>
+             Please accept this small gift from me, i hope you like it, just wanted to give you something unique,
+             esi chez jo tumhe kabhi gift mein na mili ho, or jo tum expect bhi na kar rhy ho
+             ....Really tried to do my best
+          </p>
+          <p>
+            <strong>Love you so much</strong>
+          </p>
+          <p class="letter-sign">-Muzamil</p>
+        </div>
+
+        <div class="final-photo-wrap scroll-reveal">
+          <img src="assets/images/hero2.jpg" alt="Aaby on his birthday" class="final-photo">
+        </div>
+      </div>
+
+      <div class="surprise-box scroll-reveal">
+        <p>Bas ek last cheez...</p>
+        <button id="giftButton" class="gift-button">
+          <span class="gift-lid"></span>
+          <span class="gift-ribbon">✦</span>
+          <span class="gift-body"></span>
+          <span class="gift-text">OPEN YOUR PRESENT</span>
+        </button>
+      </div>
+
+      <div id="birthdayFinale" class="birthday-finale">
+        <p>HAPPY</p>
+        <h2>22<sup>nd</sup></h2>
+        <h3>BIRTHDAY, AABY</h3>
+        <span>Allah tume hamesha khush rakhe, Ameen ❤️</span>
+      </div>
+    </section>
+
+    <footer>
+      <p>Some gifts are bought. This one was built.</p>
+      <span>Made with ❤️ for Abdullah (Aaby) </span>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
